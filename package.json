@@ -1,0 +1,36 @@
+{
+  "name": "@nudabagana/useful-hooks",
+  "version": "1.0.0",
+  "description": "Useful react JS hooks.",
+  "author": {
+    "name": "Matas Ramanauskas",
+    "url": "https://github.com/nudabagana"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {},
+  "types": "./dist/index.d.ts",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "homepage": "https://github.com/nudabagana/useful-hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nudabagana/useful-hooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nudabagana/useful-hooks/issues"
+  },
+  "keywords": [
+    "typescript",
+    "hooks",
+    "react-hooks",
+    "hook",
+    "react",
+    "javascript",
+    "js",
+    "ts"
+  ],
+  "private": false
+}
