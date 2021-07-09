@@ -1,6 +1,6 @@
 {
   "name": "@nudabagana/useful-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Useful react JS hooks.",
   "author": {
     "name": "Matas Ramanauskas",
@@ -13,8 +13,8 @@
     "test": "jest --config jestconfig.json --passWithNoTests",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint",
-    "prepare" : "yarn build",
-    "prepublishOnly" : "yarn test && yarn lint"
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint"
   },
   "peerDependencies": {
     "react": ">= 16.8.0"
