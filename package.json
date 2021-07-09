@@ -6,12 +6,22 @@
     "name": "Matas Ramanauskas",
     "url": "https://github.com/nudabagana"
   },
-  "peerDependencies": {},
-  "dependencies": {
-    "react": "^17.0.2"
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json --passWithNoTests",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint",
+    "prepare" : "yarn build",
+    "prepublishOnly" : "yarn test && yarn lint"
   },
-  "devDependencies": {},
-  "types": "./dist/index.d.ts",
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "files": [
+    "lib/**/*"
+  ],
   "readmeFilename": "README.md",
   "license": "MIT",
   "homepage": "https://github.com/nudabagana/useful-hooks",
@@ -32,5 +42,20 @@
     "js",
     "ts"
   ],
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.14",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5"
+  }
 }

@@ -1,35 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const browserNaming = [
   {
-    hidden: 'hidden',
-    event: 'visibilitychange',
-    state: 'visibilityState',
+    hidden: "hidden",
+    event: "visibilitychange",
+    state: "visibilityState",
   },
   {
-    hidden: 'webkitHidden',
-    event: 'webkitvisibilitychange',
-    state: 'webkitVisibilityState',
+    hidden: "webkitHidden",
+    event: "webkitvisibilitychange",
+    state: "webkitVisibilityState",
   },
   {
-    hidden: 'mozHidden',
-    event: 'mozvisibilitychange',
-    state: 'mozVisibilityState',
+    hidden: "mozHidden",
+    event: "mozvisibilitychange",
+    state: "mozVisibilityState",
   },
   {
-    hidden: 'msHidden',
-    event: 'msvisibilitychange',
-    state: 'msVisibilityState',
+    hidden: "msHidden",
+    event: "msvisibilitychange",
+    state: "msVisibilityState",
   },
   {
-    hidden: 'oHidden',
-    event: 'ovisibilitychange',
-    state: 'oVisibilityState',
+    hidden: "oHidden",
+    event: "ovisibilitychange",
+    state: "oVisibilityState",
   },
 ];
 
 const naming = browserNaming.find(
-  ({ hidden }) => document && (document as any)[hidden] !== undefined,
+  ({ hidden }) => document && (document as any)[hidden] !== undefined
 );
 
 const getVisible = (key?: string) => {
