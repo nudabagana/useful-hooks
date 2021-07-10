@@ -1,13 +1,13 @@
 {
   "name": "@nudabagana/useful-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Useful react JS hooks.",
   "author": {
     "name": "Matas Ramanauskas",
     "url": "https://github.com/nudabagana"
   },
   "main": "lib/index.js",
-  "types": "src/index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json --passWithNoTests",
