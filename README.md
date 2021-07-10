@@ -150,3 +150,6 @@ const SomePage: FC = () => {
   return <>user is {!!token ? "Authorized" : "Unauthorized"}</>;
 };
 ```
+
+## License
+MIT
