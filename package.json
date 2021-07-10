@@ -7,7 +7,7 @@
     "url": "https://github.com/nudabagana"
   },
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/types/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json --passWithNoTests",

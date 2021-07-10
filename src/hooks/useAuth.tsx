@@ -1,23 +1,18 @@
 import * as React from "react";
-import useStateWithLocalStorage from "./useStateLocalStorage";
-
-export interface IAuth {
-  token: string;
-  setToken: (token: string) => void;
-}
+import useStateWithLocalStorage from "./useStateWithLocalStorage";
 
 const TOKEN_NAME = "token";
 
-const AuthCtx = React.createContext<IAuth>({
-  token: "",
-  setToken: (token: string) => {},
-});
+const AuthCtx = React.createContext<[string, (token: string) => void]>([
+  "",
+  (token: string) => {},
+]);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [token, setToken] = useStateWithLocalStorage(TOKEN_NAME, "");
 
   return (
-    <AuthCtx.Provider value={{ token, setToken }}>{children}</AuthCtx.Provider>
+    <AuthCtx.Provider value={[token, setToken]}>{children}</AuthCtx.Provider>
   );
 };
 
