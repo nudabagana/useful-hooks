@@ -1,12 +1,12 @@
 ## useful-hooks
 Useful React hooks for website development.
 ## Available hooks
-* [useScrollToTop](##-useScrollToTop) - scrolls page to top on load.
-* [useWindowVisible](##-useWindowVisible) - shows if window is visible.
-* [useStateWithLocalStorage](##-useStateWithLocalStorage) - stores your state in local storage (it stays on page reaload).
-* [useCountdown](##-useCountdown) - countdown in seconds.
-* [useAuth](##-useAuth) - easily store, use, change your authentication token in any part of your webapp.
-* [useCloseOnClick](##-useCloseOnClick) - close your menu/pop-up when you click anywhere on the site.
+* [useScrollToTop](#useScrollToTop) - scrolls page to top on load.
+* [useWindowVisible](#useWindowVisible) - shows if window is visible.
+* [useStateWithLocalStorage](#useStateWithLocalStorage) - stores your state in local storage (it stays on page reaload).
+* [useCountdown](#useCountdown) - countdown in seconds.
+* [useAuth](#useAuth) - easily store, use, change your authentication token in any part of your webapp.
+* [useCloseOnClick](#useCloseOnClick) - close your menu/pop-up when you click anywhere on the site.
 ## Installation
 Using npm:
 
