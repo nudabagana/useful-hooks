@@ -1,4 +1,5 @@
 import { useAuth, AuthProvider } from "./hooks/useAuth";
+import useCloseOnClick from "./hooks/useCloseOnClick";
 import useCountdown from "./hooks/useCountdown";
 import useScrollToTop from "./hooks/useScrollToTop";
 import useStateWithLocalStorage from "./hooks/useStateWithLocalStorage";
@@ -11,4 +12,5 @@ export {
   useScrollToTop,
   useStateWithLocalStorage,
   useWindowVisible,
+  useCloseOnClick,
 };

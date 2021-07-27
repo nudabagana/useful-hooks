@@ -6,6 +6,7 @@ Useful React hooks for website development.
 * [useStateWithLocalStorage](##-useStateWithLocalStorage) - stores your state in local storage (it stays on page reaload).
 * [useCountdown](##-useCountdown) - countdown in seconds.
 * [useAuth](##-useAuth) - easily store, use, change your authentication token in any part of your webapp.
+* [useCloseOnClick](##-useCloseOnClick) - close your menu/pop-up when you click anywhere on the site.
 ## Installation
 Using npm:
 
@@ -148,6 +149,39 @@ const SomePage: FC = () => {
   const [token] = useAuth();
 
   return <>user is {!!token ? "Authorized" : "Unauthorized"}</>;
+};
+```
+
+## useCloseOnClick
+Use this hook to handle dropdown/pop-up menus. "OnClick" function toggles "open" bool. Clicking anywhere on page sets "open" to false.
+
+If you want to prevent "open" from changing state, call "e.preventDefault()" on click event.
+
+Usage:
+```ts
+import { useCloseOnClick } from "@nudabagana/useful-hooks";
+
+const App: FC = () => {
+  const [menuOpen, onClick] = useCloseOnClick();
+
+  return (
+    <>
+      <button onClick={onClick}>Toggle menu</button>
+      {menuOpen && (
+        <div>
+          <button onClick={() => console.log("(closes menu)")}>Btn1</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              console.log("(manu stays open)");
+            }}
+          >
+            Btn2
+          </button>
+        </div>
+      )}
+    </>
+  );
 };
 ```
 
