@@ -1,17 +1,14 @@
 {
-    "compilerOptions": {
-      "target": "es2015",
-      "module": "commonjs",
-      "declaration": true,
-      "declarationDir": "./lib/types",
-      "outDir": "./lib",
-      "strict": true,
-      "jsx": "react",
-      "esModuleInterop": true
-    },
-    "include": [
-      "src"
-    ],
-    "exclude": ["node_modules", "**/__tests__/*"]
-  }
-  
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "./lib/types",
+    "outDir": "./lib",
+    "strict": true,
+    "jsx": "react",
+    "esModuleInterop": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}

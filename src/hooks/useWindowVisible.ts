@@ -26,28 +26,32 @@ const browserNaming = [
     event: "ovisibilitychange",
     state: "oVisibilityState",
   },
-];
+] as const;
 
-const naming = browserNaming.find(
-  ({ hidden }) => document && (document as any)[hidden] !== undefined
-);
+type DocumentType = Document & typeof browserNaming[number];
 
 const getVisible = (key?: string) => {
   if (key === undefined) {
     return true;
   }
-  const isHidden = (document as any)[key];
+  const isHidden = (document as DocumentType)?.[key];
   if (isHidden !== true && isHidden !== false) {
     return true;
   }
   return !isHidden;
 };
 
-const useWindowVisible = () => {
-  const [visible, setVisible] = useState(getVisible(naming?.hidden));
-  const onChange = () => setVisible(getVisible(naming?.hidden));
+const useWindowVisible = (defaultValue?: boolean) => {
+  const [visible, setVisible] = useState(defaultValue ?? true);
 
   useEffect(() => {
+    const naming = browserNaming.find(
+      ({ hidden }) =>
+        document && (document as DocumentType)[hidden] !== undefined
+    );
+
+    const onChange = () => setVisible(getVisible(naming?.hidden));
+
     if (naming && !!document.addEventListener) {
       document.addEventListener(naming.event, onChange);
     }
